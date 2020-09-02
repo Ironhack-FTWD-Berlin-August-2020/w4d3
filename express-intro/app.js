@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 
 // this is needed to make the public folder available in the html files
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/home-page.html');
